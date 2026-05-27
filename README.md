@@ -1,8 +1,8 @@
-# Rhetoric Engine
+# Biolytics Rhetoric Engine
 
-Rhetoric Engine is a staged presentation cognition pipeline for turning user intent, insight, argument, evidence, design choices, and delivery constraints into effective slide decks.
+Biolytics Rhetoric Engine is an installable agent skill package for creating better presentations through a staged cognition pipeline.
 
-It helps a skill-aware agent work with the presenter before, during, and after deck assembly: clarifying what the deck is for, surfacing the actual argument, shaping slide-level theses, reasoning about audience cognition, curating evidence, compiling the deck, tightening content, iterating critique, and preparing delivery.
+It helps an agent work with the presenter before, during, and after deck assembly: clarifying intent, surfacing insight, building an argument spine, mapping slide theses, reasoning about audience cognition, curating evidence, distilling content, compiling an editable deck, iterating critique, and preparing delivery.
 
 ## Not a One-Shot Deck Generator
 
@@ -12,7 +12,16 @@ One-shot generators tend to produce plausible generic decks from a topic. Rhetor
 
 ## Install Shape
 
-Rhetoric Engine is one plugin containing many skills. Install the plugin once, then invoke the individual skills as needed, or start from the bootstrap skill when you want the agent to coordinate the gated workflow.
+Install one plugin, get many stage skills.
+
+The package includes install metadata for:
+
+- OpenAI Codex plugin consumers: `.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json`
+- Anthropic Claude Code plugin consumers: `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`
+- Google Gemini CLI extension consumers: `gemini-extension.json` and `GEMINI.md`
+- Generic agent consumers: `AGENTS.md` and the `skills/` directory
+
+For step-by-step setup, see [INSTALL.md](INSTALL.md).
 
 ## Skills
 
@@ -43,13 +52,23 @@ Rhetoric Engine is one plugin containing many skills. Install the plugin once, t
 - `critique-iterator`
 - `delivery-coach`
 
-## Local Install
+## Quick Start
 
-For Codex-style or Claude-style skill consumers, install this repository as a local plugin directory:
+Clone the repository:
 
-1. Clone or copy the repository to a stable local path.
-2. Point your skill consumer at the plugin root directory.
-3. Confirm the consumer can read the plugin manifest and the `skills/` directory.
-4. Invoke `rhetorical-orchestrator` to coordinate the gated workflow, or invoke an individual skill by name for a specific phase.
+```bash
+git clone https://github.com/Biolytics-AI/rhetoric-engine.git
+```
 
-The plugin root contains both Codex and Claude plugin metadata, with all skill definitions under `skills/`.
+Then install it for your agent platform using [INSTALL.md](INSTALL.md). When in doubt, start by invoking `rhetorical-orchestrator`; it coordinates the gated workflow and routes to the right stage skill.
+
+## Core Rule
+
+Do not compile slides before the user has approved:
+
+- intent
+- insight
+- argument spine
+- slide thesis map
+
+Rhetoric Engine exists to help the user communicate their view, not the model's generic version of it.

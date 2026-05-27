@@ -1,12 +1,13 @@
 {
   "name": "rhetoric-engine",
-  "version": "0.1.0",
-  "description": "A staged presentation cognition pipeline for turning user intent, insight, argument, evidence, and delivery constraints into effective slide decks.",
+  "version": "0.2.0",
+  "description": "Biolytics Rhetoric Engine: a staged presentation cognition pipeline for turning user intent, insight, argument, evidence, and delivery constraints into effective slide decks.",
   "author": {
-    "name": "Hugo Evers"
+    "name": "Biolytics",
+    "url": "https://github.com/Biolytics-AI"
   },
-  "homepage": "https://github.com/hugolytics/rhetoric-engine",
-  "repository": "https://github.com/hugolytics/rhetoric-engine",
+  "homepage": "https://github.com/Biolytics-AI/rhetoric-engine",
+  "repository": "https://github.com/Biolytics-AI/rhetoric-engine",
   "license": "MIT",
   "keywords": [
     "presentations",
@@ -18,10 +19,10 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Rhetoric Engine",
-    "shortDescription": "A staged cognition pipeline for user-led presentation creation",
-    "longDescription": "Use Rhetoric Engine to guide agents through intent framing, insight externalization, argument construction, slide thesis mapping, visual reasoning, evidence curation, deck compilation, critique, distillation, and delivery coaching.",
-    "developerName": "Hugo Evers",
+    "displayName": "Biolytics Rhetoric Engine",
+    "shortDescription": "Biolytics' staged cognition pipeline for user-led presentation creation",
+    "longDescription": "Use Biolytics Rhetoric Engine to guide agents through intent framing, insight externalization, argument construction, slide thesis mapping, cognitive design, visual reasoning, evidence curation, content distillation, deck compilation, critique, and delivery coaching.",
+    "developerName": "Biolytics",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
@@ -32,7 +33,7 @@
       "Help me turn this rough presentation idea into a clear deck.",
       "Help me build a presentation that communicates my view, not a generic AI summary."
     ],
-    "websiteURL": "https://github.com/hugolytics/rhetoric-engine",
+    "websiteURL": "https://github.com/Biolytics-AI/rhetoric-engine",
     "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
     "brandColor": "#7C3AED",

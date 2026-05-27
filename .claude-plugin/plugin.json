@@ -1,5 +1,12 @@
 {
   "name": "rhetoric-engine",
-  "description": "A staged presentation cognition pipeline for user-led slide creation.",
-  "version": "0.1.0"
+  "description": "Biolytics Rhetoric Engine: a staged presentation cognition pipeline for user-led slide creation.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Biolytics",
+    "url": "https://github.com/Biolytics-AI"
+  },
+  "homepage": "https://github.com/Biolytics-AI/rhetoric-engine",
+  "repository": "https://github.com/Biolytics-AI/rhetoric-engine",
+  "license": "MIT"
 }

@@ -1,0 +1,6 @@
+{
+  "name": "rhetoric-engine",
+  "version": "0.2.0",
+  "description": "Biolytics Rhetoric Engine: a staged presentation cognition pipeline for user-led slide creation.",
+  "contextFileName": "GEMINI.md"
+}

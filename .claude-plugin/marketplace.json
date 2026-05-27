@@ -1,0 +1,33 @@
+{
+  "name": "biolytics",
+  "description": "Biolytics agent plugins for high-signal technical and scientific work.",
+  "metadata": {
+    "description": "Biolytics agent plugins for high-signal technical and scientific work."
+  },
+  "owner": {
+    "name": "Biolytics"
+  },
+  "plugins": [
+    {
+      "name": "rhetoric-engine",
+      "source": "./",
+      "description": "A staged presentation cognition pipeline for user-led slide creation.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Biolytics"
+      },
+      "homepage": "https://github.com/Biolytics-AI/rhetoric-engine",
+      "repository": "https://github.com/Biolytics-AI/rhetoric-engine",
+      "license": "MIT",
+      "category": "Productivity",
+      "tags": [
+        "presentations",
+        "slides",
+        "rhetoric",
+        "argument",
+        "storytelling",
+        "skills"
+      ]
+    }
+  ]
+}
