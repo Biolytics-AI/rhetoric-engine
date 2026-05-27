@@ -1,0 +1,41 @@
+{
+  "name": "rhetoric-engine",
+  "version": "0.1.0",
+  "description": "A staged presentation cognition pipeline for turning user intent, insight, argument, evidence, and delivery constraints into effective slide decks.",
+  "author": {
+    "name": "Hugo Evers"
+  },
+  "homepage": "https://github.com/hugolytics/rhetoric-engine",
+  "repository": "https://github.com/hugolytics/rhetoric-engine",
+  "license": "MIT",
+  "keywords": [
+    "presentations",
+    "slides",
+    "rhetoric",
+    "argument",
+    "storytelling",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Rhetoric Engine",
+    "shortDescription": "A staged cognition pipeline for user-led presentation creation",
+    "longDescription": "Use Rhetoric Engine to guide agents through intent framing, insight externalization, argument construction, slide thesis mapping, visual reasoning, evidence curation, deck compilation, critique, distillation, and delivery coaching.",
+    "developerName": "Hugo Evers",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me turn this rough presentation idea into a clear deck.",
+      "Help me build a presentation that communicates my view, not a generic AI summary."
+    ],
+    "websiteURL": "https://github.com/hugolytics/rhetoric-engine",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}
