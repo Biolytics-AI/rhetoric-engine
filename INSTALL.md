@@ -15,6 +15,50 @@ To update later:
 git pull --ff-only
 ```
 
+## ChatGPT Web And ChatGPT Agent Studio
+
+There is no one-click install link for ChatGPT skills. Download the release artifact first, then upload it in the ChatGPT UI.
+
+Download:
+
+- [`rhetoric-engine.skill`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine.skill)
+- [`rhetoric-engine-chatgpt.zip`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine-chatgpt.zip) as a zip fallback
+
+### ChatGPT Web Skills
+
+1. Open ChatGPT.
+2. Open your profile menu.
+3. Click `Skills`.
+4. Click `New skill`.
+5. Upload `rhetoric-engine.skill`.
+
+![ChatGPT Skills upload](docs/assets/screenshots/chatgpt-skills-upload.png)
+
+### ChatGPT Agent Studio
+
+1. Open your agent in ChatGPT Agent Studio.
+2. Click `Add skill`.
+3. Choose `Upload skill`.
+4. Upload `rhetoric-engine.skill`.
+
+![ChatGPT Agent Studio add skill](docs/assets/screenshots/chatgpt-agent-add-skill.png)
+
+## Claude Web
+
+There is no one-click install link for Claude web skills. Download the release artifact first, then upload it in Claude.
+
+Download:
+
+- [`rhetoric-engine-claude.zip`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine-claude.zip)
+
+Install:
+
+1. Open Claude.
+2. Go to `Settings` / `Customize` / `Skills`.
+3. Upload `rhetoric-engine-claude.zip`.
+
+![Claude Skills upload](docs/assets/screenshots/claude-skills-upload.png)
+
 ## OpenAI Codex
 
 Rhetoric Engine ships with Codex plugin metadata in `.codex-plugin/plugin.json` and a Codex marketplace file in `.agents/plugins/marketplace.json`.

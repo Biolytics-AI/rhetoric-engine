@@ -1,0 +1,57 @@
+name: Validate and Release
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate JSON
+        run: |
+          python -m json.tool .codex-plugin/plugin.json >/dev/null
+          python -m json.tool .claude-plugin/plugin.json >/dev/null
+          python -m json.tool .claude-plugin/marketplace.json >/dev/null
+          python -m json.tool .agents/plugins/marketplace.json >/dev/null
+          python -m json.tool gemini-extension.json >/dev/null
+
+      - name: Lint portable skills
+        run: python scripts/lint_portability.py
+
+      - name: Build web artifacts
+        run: python scripts/build_web_artifacts.py
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rhetoric-engine-web-artifacts
+          path: |
+            dist/web/*.zip
+            dist/web/*.skill
+            dist/web/manifest.json
+            dist/web/per-skill/*.zip
+
+      - name: Attach artifacts to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${GITHUB_REF_NAME}" \
+            dist/web/rhetoric-engine.skill \
+            dist/web/rhetoric-engine-chatgpt.zip \
+            dist/web/rhetoric-engine-claude.zip \
+            dist/web/manifest.json \
+            dist/web/per-skill/*.zip \
+            --clobber

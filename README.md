@@ -54,13 +54,50 @@ For step-by-step setup, see [INSTALL.md](INSTALL.md).
 
 ## Quick Start
 
-Clone the repository:
+For ChatGPT web, ChatGPT Agent Studio, or Claude web, download the latest web skill artifact:
+
+- [Download `rhetoric-engine.skill`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine.skill) for ChatGPT web and ChatGPT Agent Studio.
+- [Download `rhetoric-engine-chatgpt.zip`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine-chatgpt.zip) as a ChatGPT zip fallback.
+- [Download `rhetoric-engine-claude.zip`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine-claude.zip) for Claude web.
+
+For coding agents, install from the GitHub repo:
 
 ```bash
 git clone https://github.com/Biolytics-AI/rhetoric-engine.git
 ```
 
 Then install it for your agent platform using [INSTALL.md](INSTALL.md). When in doubt, start by invoking `rhetorical-orchestrator`; it coordinates the gated workflow and routes to the right stage skill.
+
+## Web Install
+
+### ChatGPT Web Skills
+
+1. Download [`rhetoric-engine.skill`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine.skill).
+2. Open ChatGPT.
+3. Open your profile menu, then `Skills`.
+4. Click `New skill`.
+5. Upload the downloaded `.skill` file.
+
+![ChatGPT Skills upload](docs/assets/screenshots/chatgpt-skills-upload.png)
+
+### ChatGPT Agent Studio
+
+1. Download [`rhetoric-engine.skill`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine.skill).
+2. Open the agent in ChatGPT Agent Studio.
+3. Click `Add skill`.
+4. Choose `Upload skill`.
+5. Upload the downloaded `.skill` file.
+
+![ChatGPT Agent Studio add skill](docs/assets/screenshots/chatgpt-agent-add-skill.png)
+
+### Claude Web
+
+1. Download [`rhetoric-engine-claude.zip`](https://github.com/Biolytics-AI/rhetoric-engine/releases/latest/download/rhetoric-engine-claude.zip).
+2. Open Claude.
+3. Go to `Settings` / `Customize` / `Skills`.
+4. Upload the downloaded zip file.
+
+![Claude Skills upload](docs/assets/screenshots/claude-skills-upload.png)
 
 ## Core Rule
 
