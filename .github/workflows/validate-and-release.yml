@@ -43,15 +43,17 @@ jobs:
             dist/web/manifest.json
             dist/web/per-skill/*.zip
 
-      - name: Attach artifacts to GitHub Release
+      - name: Create GitHub Release with web artifacts
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload "${GITHUB_REF_NAME}" \
+          gh release create "${GITHUB_REF_NAME}" \
             dist/web/rhetoric-engine.skill \
             dist/web/rhetoric-engine-chatgpt.zip \
             dist/web/rhetoric-engine-claude.zip \
             dist/web/manifest.json \
             dist/web/per-skill/*.zip \
-            --clobber
+            --title "${GITHUB_REF_NAME}" \
+            --generate-notes \
+            --verify-tag
