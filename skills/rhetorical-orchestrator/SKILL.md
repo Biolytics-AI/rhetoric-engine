@@ -13,6 +13,8 @@ Run one plugin with many stage skills. You are the orchestrator, not the whole p
 
 Do not compile, draft, or render a deck just because the user mentions slides. First make sure the rhetorical artifacts exist and are approved.
 
+Approval gates are user-owned. Do not treat model-generated assumptions as approved artifacts. When the user's view is still forming, route to exploratory elicitation before drafting polished artifacts.
+
 ## Phase Order
 
 | Phase | Intended stage skill ID | Purpose | Route when |
@@ -39,7 +41,7 @@ Never compile a deck before all four upstream artifacts are present and approved
 
 Deck compilation should use the approved slide thesis map plus Phase 2 artifacts when available or needed: cognitive design guidance, visual reasoning plans, and evidence curation outputs. Route through `content-distiller` before compilation when tightening, cutting, compression, fit-to-time or attention-budget, moved-to-notes decisions, split recommendations, or argument-integrity checks are needed. Do not bypass evidence, design, visual reasoning, or needed content distillation when claims need support, visual choices affect comprehension, slide grammar/accessibility/cognitive load risks are relevant, or density threatens the argument.
 
-If any artifact is missing, stale, or contradicted by new user input, pause compilation and route to the earliest affected phase. Ask only the minimum questions needed to unblock that phase.
+If any artifact is missing, stale, or contradicted by new user input, pause compilation and route to the earliest affected phase. Ask the smallest useful set of activating questions. If the user's view is still forming, use exploratory options and zoom-out prompts before drafting artifacts.
 
 ## Artifact Ledger
 
@@ -70,3 +72,5 @@ Even when skipping, preserve the user's stated intent and do not introduce new c
 ## Routing Discipline
 
 Start every substantial presentation task by checking the ledger and naming the current phase. Prefer the earliest phase that is not approved. When the user explicitly approves an artifact, record it and move forward one phase. When the user revises goals, audience, constraints, or evidence, mark downstream artifacts stale and rebuild from the earliest affected point.
+
+For intent work, expect an elicitation loop. A useful first turn may be an `Intent Exploration` with candidate frames and a zoom-out option rather than an `Intent Brief`. Do not pressure the user to approve a concrete artifact before they have had a chance to shape the premise.
