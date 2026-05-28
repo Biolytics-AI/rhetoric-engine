@@ -67,6 +67,14 @@ Use this compact format:
 - Creating a concept map that is only a table of contents.
 - Moving to argument structure before the user has approved the underlying view.
 
+## Next Route
+
+- If the user's view, causal model, key distinction, or assumptions are still unclear: stay in `insight-externalizer`.
+- If the `Insight Artifact` is approved: load `argument-spine-builder`.
+- If the intent brief no longer fits the emerging insight: return to `intent-framer` and mark downstream artifacts stale.
+- If open questions are evidence problems rather than point-of-view problems: preserve them for `evidence-curator` but do not let them blur facts, inferences, and assumptions.
+- This artifact feeds the whole presentation by making the user's point of view inspectable before it becomes claims, slide theses, visuals, or speaker notes.
+
 ## Handoff
 
 Handoff an approved `Insight Artifact` to `argument-spine-builder`. Include the labeled facts, inferences, assumptions, and open questions so the argument spine can distinguish claims that are ready from claims that need evidence or user confirmation.

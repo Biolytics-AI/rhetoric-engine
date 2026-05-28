@@ -111,6 +111,14 @@ If any check fails, return an `Intent Exploration`, not an `Intent Brief`.
 - Optimizing for polish instead of the desired audience change.
 - Ignoring political, time, source, or approval constraints.
 
+## Next Route
+
+- If the `Intent Exploration` is unresolved or the user is still shaping the premise: stay in `intent-framer`.
+- If the `Intent Brief` is approved: load `insight-externalizer`.
+- If the user has already supplied an approved insight artifact equivalent to the required insight outputs: route to `argument-spine-builder` and record the skipped insight route in the ledger.
+- If audience, desired change, stakes, success test, constraints, or non-goals change later: return to `intent-framer` and mark downstream artifacts stale.
+- This artifact feeds the whole presentation by defining who must move, what must change, why now, how success will be judged, and what downstream choices must not violate.
+
 ## Handoff
 
 Handoff an approved `Intent Brief` to `insight-externalizer` as the normal next step. An `Intent Exploration` is not approval and does not satisfy the intent gate. Proceed beyond `insight-externalizer` only when the user has explicitly supplied an already-approved insight artifact equivalent to the required insight outputs. Do not skip the insight gate merely because the idea seems clear. Mark downstream artifacts stale if the audience, desired change, stakes, constraints, or insight changes.

@@ -10,6 +10,34 @@ Rhetoric Engine is not a prompt-to-deck shortcut. It is designed for user-led pr
 
 One-shot generators tend to produce plausible generic decks from a topic. Rhetoric Engine instead treats a deck as the result of a staged rhetorical process: the user owns the point of view, the agent helps externalize and pressure-test it, and the final artifact emerges from explicit choices.
 
+## How The Pipeline Advances
+
+Start with `rhetorical-orchestrator`. It is the meta-skill that checks the current state, routes to the earliest missing or stale stage, and prevents premature slide compilation.
+
+Each stage skill has a `Next Route` contract:
+
+- stay in the current skill while the artifact is unresolved, unapproved, or still being shaped by the user
+- load the named next skill only after the current artifact is approved, or after the user supplies an approved equivalent
+- route backward to the earliest affected upstream skill when new information changes intent, insight, argument, slide theses, evidence, design assumptions, or delivery constraints
+- preserve how the current artifact feeds the whole deck, so later stages do not invent strategy, claims, evidence, visuals, or delivery choices the user has not owned
+
+The normal route is:
+
+```text
+rhetorical-orchestrator
+  -> intent-framer
+  -> insight-externalizer
+  -> argument-spine-builder
+  -> slide-thesis-mapper
+  -> evidence-curator / cognitive-designer / visual-reasoner / content-distiller as needed
+  -> deck-compiler
+  -> critique-iterator / delivery-coach
+```
+
+The first four artifacts are hard gates before compilation: approved intent, approved insight, approved argument spine, and approved slide thesis map. Phase 2 skills may run in the order the deck needs, but they must preserve those upstream artifacts.
+
+The intent stage is deliberately elicitation-first. Sparse answers should produce an `Intent Exploration` with activating questions, candidate frames, and a zoom-out option, not a polished brief that asks the user to approve the model's assumptions.
+
 ## Install Shape
 
 Install one plugin, get many stage skills.
@@ -108,4 +136,4 @@ Do not compile slides before the user has approved:
 - argument spine
 - slide thesis map
 
-Rhetoric Engine exists to help the user communicate their view, not the model's generic version of it.
+Rhetoric Engine exists to help the user communicate their view, not the model's generic version of it. Approval means the user has shaped or accepted the artifact; model-generated assumptions alone are not approved artifacts.

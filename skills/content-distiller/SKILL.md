@@ -51,6 +51,15 @@ Optimize signal, not mere length. Distill content so each slide carries one clea
 - Treating speaker notes as a trash bin instead of a useful overflow layer.
 - Producing a prettier deck spec that no longer follows the argument spine.
 
+## Next Route
+
+- If distillation exposes an unclear thesis: return to `slide-thesis-mapper`.
+- If distillation exposes missing proof or risky cuts to evidence: load `evidence-curator`.
+- If density, hierarchy, or accessibility is still a risk after cuts: load `cognitive-designer`.
+- If visual reasoning needs to change because of cuts, splits, or moved detail: load `visual-reasoner`.
+- If the distilled deck spec is stable and required Phase 2 artifacts are present: load `deck-compiler`.
+- This artifact feeds the whole presentation by protecting signal, timing, one-idea-per-slide discipline, and useful overflow without rewriting the approved argument.
+
 ## Handoff
 
 Handoff the distilled deck spec, moved-to-notes list, cut list, split recommendations, and risk notes to `cognitive-designer`, `visual-reasoner`, `evidence-curator`, or `deck-compiler`. Mark unresolved thesis or proof problems as upstream issues, not compilation tasks.

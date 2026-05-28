@@ -68,6 +68,14 @@ Use this compact format:
 - Adding too many branches for the audience's time and attention.
 - Ignoring objections that the audience will raise privately.
 
+## Next Route
+
+- If the core claim, warrants, support branches, or rebuttals are still unresolved: stay in `argument-spine-builder`.
+- If the `Argument Spine` is approved: load `slide-thesis-mapper`.
+- If the spine exposes a weak or unowned insight: return to `insight-externalizer`.
+- If the spine changes the intended audience movement, stakes, or success test: return to `intent-framer` and mark downstream artifacts stale.
+- This artifact feeds the whole presentation by defining the persuasive logic every slide must serve: claim, reasons, warrants, evidence needs, and objection strategy.
+
 ## Handoff
 
 Handoff an approved `Argument Spine` to `slide-thesis-mapper`. Include evidence gaps and rebuttal needs so slide-level theses can reserve space for proof, qualification, and backup material.

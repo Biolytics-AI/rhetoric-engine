@@ -52,6 +52,14 @@ Return an `Evidence Dossier` with:
 - Inventing evidence or citations.
 - Choosing visuals or renderer-specific treatments instead of curating proof.
 
+## Next Route
+
+- If evidence gaps block an important claim: ask the user for sources, source more if tools permit, weaken the claim, or return to `argument-spine-builder` / `slide-thesis-mapper`.
+- If the `Evidence Dossier` is complete and evidence affects visual form: load `visual-reasoner`.
+- If the dossier is complete and evidence density or legibility is a risk: load `cognitive-designer` or `content-distiller`.
+- If proof, design, visual reasoning, and content fit are sufficient: load `deck-compiler`.
+- This artifact feeds the whole presentation by deciding what each claim can honestly prove, what belongs in backup, and what must remain caveated or unresolved.
+
 ## Handoff
 
 Handoff the `Evidence Dossier` to `visual-reasoner`, `cognitive-designer`, or deck compilation. Include primary and backup evidence, provenance notes, and gaps so downstream work can prove claims without inventing or overstating support.

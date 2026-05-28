@@ -52,6 +52,16 @@ Convert feedback into a ranked revision backlog. Treat critique as evidence abou
 - Skipping root cause analysis and creating patchwork edits.
 - Running rubric loops without tracking score deltas, acceptance criteria, or retest evidence.
 
+## Next Route
+
+- If critique reveals upstream strategy, insight, argument, slide thesis, or evidence problems: return to the earliest affected upstream skill.
+- If critique reveals density or sequencing problems within approved theses: load `content-distiller`.
+- If critique reveals hierarchy, accessibility, or cognitive load problems: load `cognitive-designer`.
+- If critique reveals weak charts, diagrams, annotations, or visual reasoning: load `visual-reasoner`.
+- If critique fixes are ready to implement in the deck: load `deck-compiler`.
+- If the deck is stable enough to practice: load `delivery-coach`.
+- This artifact feeds the whole presentation by turning feedback into a prioritized revision loop without letting taste comments override audience risk or approved strategy.
+
 ## Handoff
 
 Handoff the `critique_backlog`, root causes, fixes, retest plan, and delta report to `content-distiller`, `cognitive-designer`, `visual-reasoner`, `evidence-curator`, `deck-compiler`, or `delivery-coach`. Mark upstream strategy, thesis, evidence, or intent problems as upstream work rather than local revision tasks.

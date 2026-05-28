@@ -51,6 +51,15 @@ Return a `Visual Reasoning Plan` with:
 - Hiding caveats or uncertainty to make the visual cleaner.
 - Creating visuals that contradict cognitive design or accessibility constraints.
 
+## Next Route
+
+- If visual reasoning is blocked by unclear theses: return to `slide-thesis-mapper`.
+- If visual reasoning is blocked by weak or missing proof: load `evidence-curator`.
+- If visual choices create hierarchy, density, or accessibility risks: load `cognitive-designer`.
+- If the `Visual Reasoning Plan` is complete and content is too dense: load `content-distiller`.
+- If visual reasoning, cognitive design, evidence, and content fit are sufficient: load `deck-compiler`.
+- This artifact feeds the whole presentation by making every chart, diagram, image, annotation, or table serve the approved slide thesis rather than decoration.
+
 ## Handoff
 
 Handoff the `Visual Reasoning Plan` to `cognitive-designer`, `evidence-curator`, or deck compilation. Include rejected visuals and unresolved evidence or thesis issues so downstream work does not substitute decoration for reasoning.

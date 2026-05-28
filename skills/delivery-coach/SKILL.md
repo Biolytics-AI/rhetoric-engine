@@ -54,6 +54,14 @@ Prepare the presentation to be delivered by a real person in a real setting. Coa
 - Creating Q&A answers that invent support, overclaim, or contradict evidence.
 - Treating rehearsal as repetition without timed checkpoints or revision triggers.
 
+## Next Route
+
+- If delivery practice exposes argument, evidence, slide density, design, or deck defects: route to the earliest affected upstream skill rather than masking the problem with speaker coaching.
+- If the user needs another review loop after rehearsal: load `critique-iterator`.
+- If delivery changes require deck edits while preserving approved strategy: load `deck-compiler`.
+- If the delivery plan, Q&A plan, and rehearsal plan are stable: hand off to the presenter for timed rehearsal and user review.
+- This artifact feeds the whole presentation by making the approved deck deliverable in a real room, with timing, transitions, Q&A boundaries, and rehearsal checks tied back to the intended audience change.
+
 ## Handoff
 
 Handoff the `delivery_plan`, speaker notes guidance, Q&A plan, and rehearsal plan to the presenter, user review, or `critique-iterator` for another loop. Send unresolved slide density, evidence, design, or argument problems back to the relevant upstream skill before final rehearsal.

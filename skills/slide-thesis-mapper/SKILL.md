@@ -68,6 +68,17 @@ Use this compact format:
 - Designing layouts, choosing visuals, or compiling a deck before approval.
 - Hiding controversial claims in backup instead of addressing them in the main flow.
 
+## Next Route
+
+- If slide theses, audience questions, proof jobs, section sequence, or time fit are unresolved: stay in `slide-thesis-mapper`.
+- If the `Slide Thesis Map` is approved and claims need proof: load `evidence-curator`.
+- If the map is approved and slide comprehension or accessibility needs shaping: load `cognitive-designer`.
+- If the map is approved and visual form choices are needed: load `visual-reasoner`.
+- If the map is approved and content density is already a risk: load `content-distiller`.
+- If all hard gates and relevant Phase 2 artifacts are approved: load `deck-compiler`.
+- If the map changes the argument: return to `argument-spine-builder`; if it changes insight or intent, return to the earliest affected upstream skill.
+- This artifact feeds the whole presentation by assigning one audience question, one answer thesis, and one proof job to each slide or segment before layout begins.
+
 ## Handoff
 
 Handoff an approved `Slide Thesis Map` to design, evidence curation, or deck compilation. Treat this artifact as the required gate: no rendering, layout design, or deck assembly should begin until it is approved and consistent with the intent, insight, and argument spine.

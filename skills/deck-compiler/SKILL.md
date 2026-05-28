@@ -54,6 +54,15 @@ Never compile before the approved intent, approved insight, approved argument sp
 - Hiding overflow on slides instead of moving it to notes.
 - Skipping post-generation inspection for drift, layout, or editability problems.
 
+## Next Route
+
+- If any hard-gate artifact is missing, stale, or contradicted: stop and load the earliest affected upstream skill through `rhetorical-orchestrator`.
+- If compilation reveals thesis drift: return to `slide-thesis-mapper` or `argument-spine-builder`.
+- If compilation reveals overload: load `content-distiller` or `cognitive-designer`.
+- If compilation reveals weak proof, missing citations, or unsupported claims: load `evidence-curator`.
+- If the editable deck and inspection report are ready: load `critique-iterator` for review or `delivery-coach` for rehearsal, depending on the user's next goal.
+- This artifact feeds the whole presentation by turning approved rhetorical decisions into an editable deck while preserving traceability back to intent, insight, argument, thesis, evidence, and design.
+
 ## Handoff
 
 Handoff the editable deck spec or deck, speaker notes, and inspection report to critique, rehearsal, user review, or downstream production. Flag any slide that needs upstream revision rather than silently changing its thesis during compilation.

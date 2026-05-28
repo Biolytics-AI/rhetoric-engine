@@ -52,6 +52,15 @@ Return a `Cognitive Design QC` with:
 - Reordering information against the argument logic.
 - Making renderer-specific production demands.
 
+## Next Route
+
+- If hierarchy, reading order, accessibility, density, or attention risks are unresolved: stay in `cognitive-designer`.
+- If a slide thesis is unclear or overloaded: return to `slide-thesis-mapper` or `content-distiller` before visual or deck work.
+- If cognitive design is complete and visual form choices are still needed: load `visual-reasoner`.
+- If cognitive design is complete and proof support is still unresolved: load `evidence-curator`.
+- If cognitive design, visual reasoning, evidence, and content fit are sufficient: load `deck-compiler`.
+- This artifact feeds the whole presentation by preserving what each slide is supposed to make the audience notice, understand, compare, and remember.
+
 ## Handoff
 
 Handoff `Cognitive Design QC` to `visual-reasoner`, evidence curation, or deck compilation. Include unresolved cognitive risks and accessibility fixes so downstream work preserves hierarchy, contrast, reading order, and slide grammar.

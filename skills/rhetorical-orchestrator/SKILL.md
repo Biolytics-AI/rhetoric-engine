@@ -30,6 +30,15 @@ Approval gates are user-owned. Do not treat model-generated assumptions as appro
 | 9. Deck compilation | `deck-compiler` when available; otherwise this skill only after gates pass. | Produce or revise slides from approved slide theses plus Phase 2 artifacts and any existing content distillation outputs when available or needed. | Intent, insight, spine, and thesis map are approved, and relevant evidence, cognitive design, visual reasoning, and content distillation work has not been bypassed. |
 | 10. Critique/rehearsal | `critique-iterator` for feedback, rubric review, severity-ranked revision backlog, root causes, fixes, retest plan, and delta report; `delivery-coach` for timing, transitions, pacing, written/visual/verbal delivery, Q&A, and rehearsal guidance; otherwise this skill. | Stress-test clarity, pacing, delivery, objections, and audience reception. | A draft, outline, or talk track exists and the user asks to improve or practice. |
 
+## Stage Handoff Contract
+
+Every stage skill must identify its next route:
+
+- Stay in the current skill while its artifact is unresolved, unapproved, or still being shaped by the user.
+- Load the named next skill only after the current artifact is approved or the user has supplied an approved equivalent.
+- Route backward to the earliest affected upstream skill when new information changes intent, insight, argument, slide theses, evidence, design assumptions, or delivery constraints.
+- Preserve how the current artifact feeds the whole deck, so later skills do not invent strategy, claims, evidence, visuals, or delivery choices that the user has not owned.
+
 ## Hard Gates
 
 Never compile a deck before all four upstream artifacts are present and approved:
